@@ -8,6 +8,7 @@ const homeFile = fs.readFileSync("index.html", "utf-8");
 
 const replaceVal = (tempVal, orgVal) => {
     let temperature = tempVal.replace("{%title%}", orgVal.livescore.title);
+    temperature = temperature.replace("{%titlee%}", orgVal.livescore.title);
     temperature = temperature.replace("{%currsocre%}", orgVal.livescore.current);
     temperature = temperature.replace("{%batname%}", orgVal.livescore.batsman);
     temperature = temperature.replace("{%brun%}", orgVal.livescore.batsmanrun);
